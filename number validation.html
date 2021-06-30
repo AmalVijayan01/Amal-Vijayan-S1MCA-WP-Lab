@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Number Validation</title>
+</head>
+<body>
+<p>please enter a number between 1 and 20:</p>
+<input id="numb">
+<button type="button" onclick="myfunc()">submit</button>
+<p id="demo"></p>
+<script language="javascript" type="text/javascript">
+function myfunc()
+{
+var x,t;
+x=document.getElementById("numb").value;
+if(isNaN(x) || x<1 || x>20)
+{
+t="Input Value is not valid.";
+}
+else{
+t="Input is valid"
+}
+document.getElementById("demo").innerHTML=t;
+}
+</script>
+</body>
+</html>

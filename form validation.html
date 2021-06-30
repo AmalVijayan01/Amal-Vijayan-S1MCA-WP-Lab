@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Form validation</title>
+		<script language="javascript" type="text/javascript">
+			function fvalidate()
+			{
+				if(document.myform.Name>value=="")
+				{
+					alert("Please enter your name.");
+					document.myform.Name.focus();
+					return false;
+				}
+				if(document.myform.Email.value=="")
+				{
+					alert("Please enter your email id.");
+					document.myform.Email.focus();
+					return false;
+				}
+				if(document.myform.Pin.value=="" || document.myform.Pin.value!=6)
+				{
+					alert("Please entera valid pincode.");
+					document.myform.pin.focus();
+					return false;
+				}
+				if(document.myform.Country.value=="-1")
+				{
+					alert("Please select your country.");
+					document.myform.Country.focus();
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform" method="POST" onsubmit="return fvalidate()">
+			<table cellspacing="2" cellpadding="2" border="1">
+				<tr>
+					<td align="right">Name</td>
+					<td><input type="text" name="Name/"></td>
+				</tr>
+				<tr>
+					<td align="right">Email</td>
+					<td><input type="email" name="Email/"></td>
+				</tr>
+				<tr>
+					<td align="right">Pin Code</td>
+					<td><input type="text" name="Pin/"></td>
+				</tr>
+				<tr>
+					<td align="right">Country</td>
+					<td>
+						<select name="Country">
+							<option value="-1">Choose Yours</option>
+							<option value="1">INDIA</option>
+							<option value="1">UK</option>
+							<option value="1">CANADA</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">Submit</td>
+					<td><input type="submit" value="SUBMIT"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
